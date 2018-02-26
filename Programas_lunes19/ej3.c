@@ -1,33 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
 {
-    int n,den,x,res,res2,sum;
+    int n,den,x;
+    float res, sum;
     printf("Ingrese n:_");
     scanf("%d",&n);
 
     for(int i=1;i<=n;i++){
         
-        den= 11*(i);
+        den= (11*i);
+
         if(i==1){
-            printf("%d",i);
+            printf("%d", i);
         }
-        else if(i%2==0){
+        if(i>1){
+        if((i%2)==0){
                 printf("%d/%d",-1,den);
-                res=(1/(11*i))*(-1);
-                sum=res+1;
+                res= pow(-den,-1);
+                
+               
                 
             }else{
                 printf("+%d/%d",1,den);
-                res2=1/4;
-                sum=res2+1;
+                res= pow(den,-1);
+                 
                
             }
+            }
+
+             sum=sum+res;
 
         }
 
-        printf("%d",sum);
+        printf("\nResultado= %f",1+sum);
 
 
         
