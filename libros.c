@@ -1,14 +1,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-long long int paginas(int);
+long long int paginas(long int);
 int main(){
 	
 	int ejecuciones;
 
 	printf("Ingrese el numero de ejecuciones de su programa\n" );
 	scanf("%d",&ejecuciones);
-	long long int digitos[ejecuciones];
+	long int digitos[ejecuciones];
 
 	for(int i=0; i<ejecuciones;i++){
 		scanf("%ld",&digitos[i]);
@@ -16,7 +16,7 @@ int main(){
 	for(int i=0; i<ejecuciones;i++){
 		if((paginas(digitos[i]))==0)
 			printf("imposible\n");
-		else{printf("PAGINAS :%d\n",paginas(digitos[i]));}
+		else{printf("PAGINAS :%ld\n",paginas(digitos[i]));}
 		
 	}
 
@@ -28,9 +28,9 @@ int main(){
 
 
 ///FUNCIÓN QUE CALCULA EL NUMERO DE PAGINAS
-long long int paginas(int digitos){
+long long int paginas(long int digitos){
 	int paginas=0;
-	printf("%d\n", digitos);
+	printf("%ld\n", digitos);
 	if(digitos%2==0){
 		return 0;
 	}
